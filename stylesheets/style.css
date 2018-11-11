@@ -1,0 +1,246 @@
+            html, body {
+                //overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background:#ddedf9;
+            }
+			
+			.lab-panel_main {
+				min-height: 100vh;
+				padding: 8.5em 2.5em 8em;
+				background: transparent;
+			}
+
+			.lab-panel_main {
+				width: 100%;
+				min-height: 100vh;
+				padding: 6em 2.5em 8em 3em;
+				box-sizing: border-box;
+				overflow: hidden;
+				position: relative;
+				z-index: 5;
+			}
+			@media only screen and (min-width: 991px) {
+			#container canvas{
+			margin-left: -40vw;
+			}
+			}
+            
+			.lab_ui-region{
+			position: relative;
+			z-index: 20;
+			pointer-events: none;
+			}
+			.lab_ui-step {
+				height: calc( 100vh - 11.5em);
+			}
+			.lab_ui {
+				width: 100%;
+				height: 100%;
+			}
+			.lab_app {
+						width: 100%;
+						height: 100%;
+						padding: 0;
+						box-sizing: border-box;
+						position: absolute;
+						top: 0;
+						left: 0;
+						bottom: 0;
+						z-index: 10;
+						opacity: 1;
+						transition: opacity 0.5s 0s;
+						-ms-touch-action: none;
+						touch-action: none;
+					}
+			
+			.lab_bg {
+						width: 100%;
+						height: 100vh;
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: 0;
+						opacity: 1;
+						transition: opacity 1s 0s;
+					}
+			
+			.lab_bg:after {
+									content: '';
+									width: 60vh;
+									height: 60vh;
+									display: block;
+									position: absolute;
+									top: 45%;
+									left: 47%;
+									background-color: #fff;
+									border-radius: 50%;
+									transform: translate(-50%, -50%);
+								}
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+                border-radius: 50%;
+                outline: 0;
+            }
+            .molids{
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                margin: 8px;
+                border-radius: 50%;
+                float:left;
+            }
+            .xixcust {
+                clear: both;
+                cursor:pointer;
+            }
+            span.egseas {
+                display: inline-block;
+                padding: 12px;
+                font-size: 18px;
+                float: left;
+            }
+
+            .xixcust:hover .molids, .xixcust.active .molids{
+                width:40px;
+                height:40px;
+                margin:4px;
+            }
+            /*/.colaz {
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                margin: 6px;
+                border-radius: 50%;
+                cursor: pointer;
+            }*/
+			.colaz{
+			align-items: flex-start;
+			text-align: center;
+			width: 2em;
+			height: 2em;
+			margin: 0 0 0.5em 0.5em;
+			padding: 0;
+			box-sizing: border-box;
+			display: inline-block;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			outline: none;
+			cursor: pointer;
+			border: 1px solid rgba(0, 0, 0, 0.05);
+			border-radius: 50%;
+			box-shadow: 0 1px 2px 0 rgba(43, 45, 66, 0.2), 0 4px 12px 0 rgba(43, 45, 66, 0.1);
+			transition: transform 0.25s;
+			}
+			
+			.colaz:hover{
+				transform: scale(1.25);
+			}
+
+            .xixcust:hover .molids:after, .xixcust.active .molids:after{
+                content: '\2713';
+                display: inline-block;
+                color: white;
+                width: 40px;
+                height: 20px;
+                margin-top: 9px;
+                text-align: center;
+            }
+
+			#mat0 .molids{
+                background: #043360;
+            }
+            #mat1 .molids{
+                background: #043360;
+            }            
+            #mat2 .molids{
+                background: #D30B37;
+            }
+            #ajong .molids{
+                background: #043360;
+            }
+            #bjong .molids{
+                background: #043360;
+            }            
+            #cjong .molids{
+                background: #D30B37;
+            }
+            #djong .molids{
+                background: #043360;
+            }
+            #ejong .molids{
+                background: #D30B37;
+            }
+            #fjong .molids{
+                background: #D30B37;
+            }
+            #gjong .molids{
+                background: #ffffff;
+            }
+#svga{display:none;}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+#tabs{
+	    border: none;
+    background: transparent;
+}
+
+.ui-tabs-nav{
+	    background: transparent !important;
+    border: none !important;
+}
+.text-editor-container{
+	background:#fff;
+	border-radius:5px;
+	padding:15px;
+	box-shadow: 0 1px 2px 0 rgba(43, 45, 66, 0.2), 0 4px 12px 0 rgba(43, 45, 66, 0.1);
+}

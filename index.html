@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sporitility</title>
+<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/bootstrap-combined.min.css">
+<link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+var models = [
+				{
+				gender:'men',
+				category:[
+							{
+							name:'1',
+							products:['1','2','3']
+							},
+							{
+							name:'2',
+							products:['1','2']
+							}
+						]
+				},
+				{
+				gender:'women',
+				category:[
+							{
+							name:'1',
+							products:['1','2']
+							},
+							{
+							name:'2',
+							products:['1','2']
+							}
+						]
+				}
+			];
+	var gender = 'men';
+	var category = '1';
+	var product = '1';
+</script>
+</head>
+<body>
+
+
+<div class="container">
+
+<div class="row" style="display:none;">
+            <div class="col-md-4 col-md-push-4">
+            </div>
+<div class="col-md-4 col-md-pull-4">
+                <h3>Customize</h3>
+                <p>Select a color zone below, then choose your team colors.</p>
+<div class="action-container">
+<div class="dropdown">
+  <button id="gender" class="dropbtn">Gender</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="setGender('men')">men</a>
+    <a href="#"onclick="setGender('women')">women</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button id="category" class="dropbtn">Category</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="setCategory('1')">1</a>
+    <a href="#"onclick="setCategory('2')">2</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button id="product" class="dropbtn">product</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="setProduct('1')">1</a>
+    <a href="#"onclick="setProduct('2')">2</a>
+  </div>
+</div>
+</div>
+                
+            </div>
+	<div class="col-md-4 col-md-push-right">
+	  <h3>Colors</h3>
+	   <div class="color-palete">
+	   </div>
+	</div>
+</div>
+
+<div class="lab_bg"></div>
+<div class="row">
+<div class="col-md-4 col-md-push-4">
+
+<div class="lab" id="container"></div>
+
+</div>
+<div class="col-md-4 col-md-pull-4">
+<h3>Customize</h3>
+<p>Select a color zone below, then choose your team colors.</p>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Zones</a></li>
+    <li><a href="#tabs-2">Texts</a></li>
+  </ul>
+<div id="tabs-1" class="materials">	</div>
+<div id="tabs-2" class="texts">	</div>
+</div>
+</div>
+<div class="col-md-4 col-md-push-right">
+	   <div class="color-palete"></div>
+	   <div class="text-editor"></div>
+</div>
+</div> 	
+
+<div id="svgContainer" style="display:none;"> </div>
+</div>
+
+
+<!--<script type="text/javascript" src="javascripts/lib/jungle.js"></script>
+<script type="text/javascript" src="javascripts/lib/volume-meter.js"></script>-->
+
+<script type="text/javascript" src="javascripts/jquery/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="javascripts/three-min/three.min.js"></script>
+<script type="text/javascript" src="javascripts/three/LoaderSupport.js"></script>
+<script type="text/javascript" src="javascripts/three/OrbitControls.js"></script>
+<!--<script type="text/javascript" src="javascripts/three/NURBSCurve.js"></script>
+<script type="text/javascript" src="javascripts/three/NURBSUtils.js"></script>-->
+<script type="text/javascript" src="javascripts/three/OBJLoader2.js"></script>
+<!--<script type="text/javascript" src="javascripts/three/SVGLoader.js"></script>-->
+<script type="text/javascript" src="javascripts/three/Detector.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+    $( "#tabs" ).tabs().on('click',function(event){
+	       console.log('t',event.target.id);
+		   if(event.target.id == 'ui-id-1'){
+		   $('.color-palete').show();
+		   $('.text-editor').hide();
+		   }
+		   if(event.target.id == 'ui-id-2'){
+		   $('.color-palete').hide();
+		   $('.text-editor').show();
+		   load_text_details(selectedText);
+		   }
+	});
+  });
+</script>
+<script type="text/javascript" src="javascripts/main_s.js"></script>
+
+<script>
+</script>
+</body>
+</html>
+
