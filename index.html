@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>3d-tshirt-design</title>
+<title>Sporitility</title>
 <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
 <link rel="stylesheet" href="stylesheets/bootstrap-combined.min.css">
 <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
@@ -96,6 +96,31 @@ var models = [
 <div class="col-md-4 col-md-pull-4">
 <h3>Customize</h3>
 <p>Select a color zone below, then choose your team colors.</p>
+<div class="action-container">
+		<div class="dropdown">
+		  <button id="gender" class="dropbtn">Gender</button>
+		  <div class="dropdown-content">
+			<a href="#" onclick="setGender('men')">men</a>
+			<a href="#"onclick="setGender('women')">women</a>
+		  </div>
+		</div>
+		<div class="dropdown">
+		  <button id="category" class="dropbtn">Category</button>
+		  <div class="dropdown-content">
+			<a href="#" onclick="setCategory('1')">1</a>
+			<a href="#"onclick="setCategory('2')">2</a>
+		  </div>
+		</div>
+		<div class="dropdown">
+		  <button id="product" class="dropbtn">product</button>
+		  <div class="dropdown-content">
+			<a href="#" onclick="setProduct('1')">1</a>
+			<a href="#"onclick="setProduct('2')">2</a>
+		  </div>
+		</div>
+</div>
+
+
 <div id="tabs">
   <ul>
     <li><a href="#tabs-1">Zones</a></li>
