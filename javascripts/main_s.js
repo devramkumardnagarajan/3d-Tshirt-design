@@ -47,9 +47,9 @@ function init() {
 	scene.add(new THREE.AmbientLight(0x666666));
 	
 	var lights = [
-	{color:0xffffff,intensity: 0.63,position:{x: -500, y: 320, z: 500},lookAt: {x: 0, y: 0, z: 0}},
-	{color:0xffffff,intensity: 0.63,position:{x: 200, y: 50, z: 500},lookAt: {x: 0, y: 0, z: 0}},
-	{color:0xffffff,intensity: 0.8,position:{x: 0, y: 100, z: -500},lookAt:  {x: 0, y: 0, z: 0}},
+	{color:0xffffff,intensity: 0.3,position:{x: -500, y: 320, z: 500},lookAt: {x: 0, y: 0, z: 0}},
+	{color:0xffffff,intensity: 0.3,position:{x: 200, y: 50, z: 500},lookAt: {x: 0, y: 0, z: 0}},
+	{color:0xffffff,intensity: 0.4,position:{x: 0, y: 100, z: -500},lookAt:  {x: 0, y: 0, z: 0}},
 	{color:0xffffff,intensity: 0.3,position:{x: 1, y: 0, z: 0},lookAt:  {x: 0, y: 0, z: 0}},
 	{color:0xffffff,intensity: 0.15,position:{x: -1, y: 0, z: 0},lookAt:  {x: 0, y: 0, z: 0}}
 	]
@@ -67,7 +67,7 @@ function init() {
 	
 	})
 	object = new THREE.Object3D();
-	var slight = new THREE.SpotLight(0xffffbb,0.5);
+	var slight = new THREE.SpotLight(0xffffbb,0.1);
 	slight.position.set(0,0,0);
 	slight.lookAt(0,0,0);
 	//slight.angle(0.5);
@@ -77,7 +77,7 @@ function init() {
 	//scene.add(slight);
 	
 	//light = new THREE.DirectionalLight(0xffffff, 1.75);
-	light = new THREE.DirectionalLight(0xdfebff, 0.5);
+	light = new THREE.DirectionalLight(0xdfebff, 0.3);
 	light.position.set(500, 100, 80);
 	
 	
