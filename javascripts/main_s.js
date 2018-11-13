@@ -22,6 +22,10 @@ var geometries = [];
 
 var width = window.innerWidth;
 var height = window.innerHeight;
+if(width < height)
+{
+	height = width;
+}
 var pixelRatio = window.devicePixelRatio;
 console.log('pixelRatio',pixelRatio);
 init();
@@ -35,23 +39,23 @@ function init() {
 	scene = new THREE.Scene();
 	var screen_rate = width / height;
 
-	camera = new THREE.PerspectiveCamera( 30, screen_rate, 100, 1500 );
+	camera = new THREE.PerspectiveCamera( 30, screen_rate, 100, 1200 );
 	camera.position.set( 500, 0, 0 );
 	scene.add(camera);
 	controls = new THREE.OrbitControls( camera,container );
 	controls.minDistance = 200;
-	controls.maxDistance = 1000;
+	controls.maxDistance = 700;
 	controls.update();
 	var light, materials;
 	//scene.add(new THREE.AmbientLight(0xffffff));
 	scene.add(new THREE.AmbientLight(0x666666));
 	
 	var lights = [
-	{color:0xffffff,intensity: 0.3,position:{x: -500, y: 320, z: 500},lookAt: {x: 0, y: 0, z: 0}},
+	{color:0xffffff,intensity: 0.53,position:{x: -500, y: 320, z: 500},lookAt: {x: 0, y: 0, z: 0}},
 	{color:0xffffff,intensity: 0.3,position:{x: 200, y: 50, z: 500},lookAt: {x: 0, y: 0, z: 0}},
 	{color:0xffffff,intensity: 0.4,position:{x: 0, y: 100, z: -500},lookAt:  {x: 0, y: 0, z: 0}},
 	{color:0xffffff,intensity: 0.3,position:{x: 1, y: 0, z: 0},lookAt:  {x: 0, y: 0, z: 0}},
-	{color:0xffffff,intensity: 0.15,position:{x: -1, y: 0, z: 0},lookAt:  {x: 0, y: 0, z: 0}}
+	{color:0xffffff,intensity: 0.3,position:{x: -1, y: 0, z: 0},lookAt:  {x: 0, y: 0, z: 0}}
 	]
     //{color:0xffffbb,intensity: 0.5,position:{x: 0, y: 0, z: 4},lookAt:  {x: 0, y: 0, z: 0},angle:0.5,distance:6}
 	lights.forEach(function(light){
@@ -120,6 +124,10 @@ function init() {
 function onWindowResize() {
      width = window.innerWidth;
 	 height = window.innerHeight;
+	 if(width < height)
+	{
+		height = width;
+	}
 	camera.aspect = width / height;
 	camera.updateProjectionMatrix();
 	
