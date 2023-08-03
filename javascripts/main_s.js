@@ -214,7 +214,7 @@ function changeProduct(){
 	
 }
 function loadSvg(response){
-$.get('assets/'+gender+'/cat'+category+'/prod'+product+'/Untitled.svg', function(data) {  
+$.get('assets/'+gender+'/cat'+category+'/prod'+product+'/pattern.svg', function(data) {  
 	var svgData = new XMLSerializer().serializeToString(data.documentElement);
 	$('#svgContainer').empty();
 	$('#svgContainer').append(svgData).html();
